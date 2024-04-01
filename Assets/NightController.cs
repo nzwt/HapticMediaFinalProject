@@ -2,23 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class NightController : MonoBehaviour
 {
 
     Renderer renderer;
-    [SerializeField] private UnityEvent _nightTime;
-    [SerializeField] private UnityEvent _dayTime;
-    
+
     // Start is called before the first frame update
     void Start()
     {
-        // Disable the renderer for the object
-        this.renderer = GetComponent<Renderer>();
-        if (renderer != null)
-        {
-            renderer.enabled = false;
-        }
+        // // Disable the renderer for the object
+        // this.renderer = GetComponent<Renderer>();
+        // if (renderer != null)
+        // {
+        //     renderer.enabled = false;
+        // }
         
     }
 
@@ -28,12 +27,12 @@ public class NightController : MonoBehaviour
         
     }
 
-    void nightTime()
+    public void nightTime()
     {
         this.renderer.enabled = true;
     }
 
-    void dayTime()
+    public void dayTime()
     {
         this.renderer.enabled = false;
     }
