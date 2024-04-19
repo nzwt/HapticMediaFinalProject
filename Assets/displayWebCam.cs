@@ -42,7 +42,7 @@ public class displayWebCam : MonoBehaviour
             }
         }
         float averageBrightness = totalBrightness / counter;
-        Debug.Log(averageBrightness);
+        //Debug.Log(averageBrightness);
         if (averageBrightness < 0.1)
         {
             onCameraDark();
