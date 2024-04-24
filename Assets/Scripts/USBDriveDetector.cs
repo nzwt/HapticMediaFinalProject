@@ -8,7 +8,10 @@ public class USBDriveDetector : MonoBehaviour
 {
     public string[] usbDriveNames; // Names of the USB drives you want to detect
     public Sprite[] backgroundImages; // Background images corresponding to each USB drive
-    public SpriteRenderer spriteRenderer;
+    public Sprite[] nightBackgroundImages;
+    public SpriteRenderer daySpriteRenderer;
+    public SpriteRenderer nightSpriteRenderer;
+
 
     private Image backgroundImage;
 
@@ -24,7 +27,8 @@ public class USBDriveDetector : MonoBehaviour
         // If the inserted USB drive is found, load the corresponding background image
         if (index != -1 && index < backgroundImages.Length)
         {
-            spriteRenderer.sprite = backgroundImages[index];
+            daySpriteRenderer.sprite = backgroundImages[index];
+            nightSpriteRenderer.sprite = nightBackgroundImages[index];
         }
     }
 
