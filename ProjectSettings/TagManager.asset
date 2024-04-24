@@ -41,6 +41,9 @@ TagManager:
   - name: Background
     uniqueID: 3137816795
     locked: 0
+  - name: Nighttime
+    uniqueID: 57421183
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

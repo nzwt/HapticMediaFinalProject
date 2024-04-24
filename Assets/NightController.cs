@@ -18,6 +18,7 @@ public class NightController : MonoBehaviour
         // {
         //     renderer.enabled = false;
         // }
+        this.renderer.enabled = false;
         
     }
 
@@ -29,11 +30,13 @@ public class NightController : MonoBehaviour
 
     public void nightTime()
     {
+        Debug.Log("nighttime");
         this.renderer.enabled = true;
     }
 
     public void dayTime()
     {
+        Debug.Log("daytime");
         this.renderer.enabled = false;
     }
 }
